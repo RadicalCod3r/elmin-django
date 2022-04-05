@@ -5,12 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-        <p>Hi {{ user.username }}, You are {{ user.age }} years old.</p>
-        <a href="{% url 'logout' %}">Log Out</a>
-    {% else %}
-        <p>You aren't logged in yet.</p>
-        <a href="{% url 'login' %}">Log In</a> |
-        <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+    <br/>
+    <div class="jumbotron">
+        <h1 class="display-4">Newspaper app</h1>
+        <p class="lead">A Newspaper website built with Django.</p>
+        <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'list-article' %}"
+        role="button">View All Articles</a>
+        </p>
+    </div>
 {% endblock %}
